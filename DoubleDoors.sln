@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleDoors", "DoubleDoors/DoubleDoors.csproj", "{B558DD49-4F23-4CB0-BAF9-ED96BB5453A5}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|x64 = Debug|x64
+        Release|x64 = Release|x64
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {B558DD49-4F23-4CB0-BAF9-ED96BB5453A5}.Debug|x64.ActiveCfg = Debug|x64
+        {B558DD49-4F23-4CB0-BAF9-ED96BB5453A5}.Debug|x64.Build.0 = Debug|x64
+        {B558DD49-4F23-4CB0-BAF9-ED96BB5453A5}.Release|x64.ActiveCfg = Release|x64
+        {B558DD49-4F23-4CB0-BAF9-ED96BB5453A5}.Release|x64.Build.0 = Release|x64
+    EndGlobalSection
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+    GlobalSection(ExtensibilityGlobals) = postSolution
+        SolutionGuid = {66AEB362-ED44-4DBD-9E1E-5BBCF0C7E57E}
+    EndGlobalSection
+EndGlobal

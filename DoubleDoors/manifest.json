@@ -1,0 +1,13 @@
+{
+  "uuid": "9c02029c-7902-4fa9-90a8-f7fa5fc3cc7b",
+  "plugin_name": "DoubleDoors",
+  "plugin_author": "xJqms",
+  "plugin_description": "Opens/closes both doors if you have a double door!",
+  "plugin_version": "1.0.0",
+  "game_version": "1.21.81",
+  "supported_game_version_ranges": [
+    "0.0.0-9.99.9"
+  ],
+  "runtime_version": 1,
+  "target_assembly": "DoubleDoors.dll"
+}
