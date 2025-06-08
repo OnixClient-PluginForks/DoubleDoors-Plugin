@@ -29,7 +29,7 @@ namespace DoubleDoors {
         protected override void OnLoaded() {
             Config = new DoubleDoorsConfig(PluginDisplayModule);
             Onix.Events.Player.BuildBlock += PlayerOnBuildBlock;
-            Onix.Events.Rendering.RenderScreen += RenderingOnRenderScreen;
+            Onix.Events.Rendering.RenderScreenGame += RenderingOnRenderScreen;
             Onix.Events.Audio.SoundPlayedInWorld += AudioOnSoundPlayedInWorld;
         }
 
@@ -179,7 +179,7 @@ namespace DoubleDoors {
 
         protected override void OnUnloaded() {
             Onix.Events.Player.BuildBlock -= PlayerOnBuildBlock;
-            Onix.Events.Rendering.RenderScreen -= RenderingOnRenderScreen;
+            Onix.Events.Rendering.RenderScreenGame -= RenderingOnRenderScreen;
             Onix.Events.Audio.SoundPlayedInWorld -= AudioOnSoundPlayedInWorld;
 
             Instance = null!;
