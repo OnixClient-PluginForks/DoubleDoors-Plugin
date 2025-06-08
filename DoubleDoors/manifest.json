@@ -3,7 +3,7 @@
   "plugin_name": "DoubleDoors",
   "plugin_author": "xJqms",
   "plugin_description": "Opens/closes both doors if you have a double door!",
-  "plugin_version": "1.0.0",
+  "plugin_version": "1.0.1",
   "game_version": "1.21.81",
   "supported_game_version_ranges": [
     "0.0.0-9.99.9"
