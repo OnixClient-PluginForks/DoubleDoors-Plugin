@@ -27,7 +27,7 @@ namespace DoubleDoors {
         private static bool _isProcessingDoubleDoor;
 
         protected override void OnLoaded() {
-            Config = new DoubleDoorsConfig(PluginDisplayModule);
+            Config = new DoubleDoorsConfig(PluginDisplayModule, true);
             Onix.Events.Player.BuildBlock += PlayerOnBuildBlock;
             Onix.Events.Rendering.RenderScreenGame += RenderingOnRenderScreen;
             Onix.Events.Audio.SoundPlayedInWorld += AudioOnSoundPlayedInWorld;
@@ -42,18 +42,17 @@ namespace DoubleDoors {
         }
 
         private void RenderingOnRenderScreen(RendererGame gfx, float delta, string screenName, bool isHudHidden, bool isClientUi) {
-            if (_isDoubleDoor && DoorsToOpen.Count > 0) {
-                List<BlockPos> doorsToProcess = new(DoorsToOpen);
-                DoorsToOpen.Clear();
-                _isDoubleDoor = false;
+            if (!_isDoubleDoor || DoorsToOpen.Count <= 0) return;
+            List<BlockPos> doorsToProcess = new(DoorsToOpen);
+            DoorsToOpen.Clear();
+            _isDoubleDoor = false;
                 
-                _isProcessingDoubleDoor = true;
-                foreach (BlockPos doorPos in doorsToProcess) {
-                    Onix.LocalPlayer!.BuildBlock(doorPos, 0);
-                }
-                _isProcessingDoubleDoor = false;
-                _cancelNextDoorNoise = true;
+            _isProcessingDoubleDoor = true;
+            foreach (BlockPos doorPos in doorsToProcess) {
+                Onix.LocalPlayer!.BuildBlock(doorPos, 0);
             }
+            _isProcessingDoubleDoor = false;
+            _cancelNextDoorNoise = true;
         }
         private bool PlayerOnBuildBlock(LocalPlayer player, BlockPos position, BlockFace face) {
             if (_isProcessingDoubleDoor) {
